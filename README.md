@@ -30,4 +30,4 @@ FUNCTIONALITIES:-
 
 7. Multiple products: Proceed for checkout.
 
-Please visit my site fro here- https://immense-hamlet-29750.herokuapp.com/
+Please visit my site from here- https://immense-hamlet-29750.herokuapp.com/
