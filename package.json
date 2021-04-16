@@ -1,7 +1,7 @@
 {
   "name": "banking",
   "version": "1.0.0",
-  "description": "Banking Website",
+  "description": "Shopping Website",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
