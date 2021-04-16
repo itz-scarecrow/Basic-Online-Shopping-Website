@@ -1,0 +1,207 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+        rel="stylesheet">
+
+ 
+    <title>Welcome To My Account</title>
+
+ 
+    <link rel="shortcut icon" type="image/icon" href="/favicon.png" />
+
+    
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="/assets/css/linearicons.css">
+
+  
+    <link rel="stylesheet" href="/assets/css/animate.css">
+
+   
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+
+ 
+    <link rel="stylesheet" href="/assets/css/bootsnav.css">
+
+  
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+
+
+</head>
+
+<body>
+
+
+
+
+    <!--welcome-hero start -->
+    <header id="home" class="welcome-hero">
+
+
+       
+        <div class="top-area">
+            <div class="header-area">
+                
+                <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"
+                    data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+
+                    
+                    <div class="top-search">
+                        <div class="container">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                <form action="/category" method="POST">
+                                    <select id="cars" name="search" class="form-control">
+                                        <option value="Phones" selected>Phones</option>
+                                        <option value="Furniture">Furniture</option>
+                                        <option value="Jewellery">Jewellery</option>
+                                        <option value="Shirts">Shirts</option>
+                                    </select>
+                                    <button type="submit" name="ok" value="<%=username%>"
+                                        class="btn btn-primary">Ok</button>
+                                </form>
+                                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="container">
+                        
+                        <div class="attr-nav">
+                            <ul>
+                                <li class="search">
+                                    <a href="#"><span class="lnr lnr-magnifier"></span></a>
+                                </li>
+                              
+                            </ul>
+                        </div>
+                       
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target="#navbar-menu">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <a class="navbar-brand">Welcome To My Account!</a>
+
+                        </div>
+                        
+                        <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+                            <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                                <li><a href="/home/<%=username%>">Home</a></li>
+                                <li><a href="/allProducts/<%=username%>">All Products</a></li>
+                                <li><a href="/about/<%=username%>">About</a></li>
+                                <li class="active"><a href="/My_account/<%=username%>">My Account</a></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    
+                </nav>
+             
+            </div>
+          
+            <div class="clearfix"></div>
+
+        </div>
+        
+
+    </header>
+    
+    <section class="acc">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+        <body>
+            <div class="main-content">
+                <div class="container mt-7">
+                    
+                    <div class="row">
+                        <div class="col-xl-8 m-auto order-xl-1">
+                            <div class="card bg-secondary shadow">
+                                
+                                <div class="card-body">
+                                    <form>
+                                        <h6 class="heading-small text-muted mb-4" style="text-align: center; padding-bottom: 20px; color: purple; text-decoration: underline; font-weight: bolder;">User information</h6>
+                                        <div class="pl-lg-4">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="form-group focused">
+                                                        <label class="form-control-label"
+                                                            for="input-username">Username</label>
+                                                        <input type="text" id="input-username"
+                                                            class="form-control form-control-alternative"
+                                                            placeholder="Username" value="<%=user.uName%>">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label class="form-control-label" for="input-email">Email
+                                                            address</label>
+                                                        <input type="email" id="input-email"
+                                                            class="form-control form-control-alternative"
+                                                            value="<%=user.email%>">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="form-group focused">
+                                                        <label class="form-control-label" for="input-first-name">Phone
+                                                            No:</label>
+                                                        <input type="number" id="input-first-name"
+                                                            class="form-control form-control-alternative"
+                                                             value="<%=user.phone%>">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </section>
+
+
+    <script src="/assets/js/jquery.js"></script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+    <script src="/assets/js/bootsnav.js"></script>
+
+   
+    <script src="/assets/js/owl.carousel.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+
+  
+    <script src="/assets/js/custom.js"></script>
+
+</body>
+
+</html>

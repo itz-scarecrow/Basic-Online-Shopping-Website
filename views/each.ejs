@@ -1,0 +1,117 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Product Details</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/each.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="container-fliud">
+                <div class="wrapper row">
+                    <div class="preview col-md-6">
+
+                        <div class="preview-pic tab-content">
+                            <div class="tab-pane active" id="pic-1"><img src="/<%=items.img1%>" /></div>
+                        </div>
+
+                    </div>
+                    <div class="details col-md-6">
+                        <h3 class="product-title">
+                            <%=items.product%>
+                        </h3>
+                        <div class="rating">
+                            <div class="stars">
+                                <h3>
+                                    <strong>
+                                        <%for(var i=0;i<items.rating;i++){%>
+                                            <span class="fa fa-star checked"></span>
+                                            <%}%>
+                                    </strong>
+                                    <strong>
+                                        <%for(var i=0;i<5-items.rating;i++){%>
+                                            <span class="fa fa-star"></span>
+                                            <%}%>
+                                    </strong>
+                                </h3>
+                            </div>
+                            <span class="review-no">
+                                <%=items.reviews%> reviews
+                            </span>
+                        </div>
+                        <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium
+                            cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
+                        <h4 class="price">Brand: <span>
+                                <%=items.brand%>
+                            </span></h4>
+                        <h4 class="price">Current price: <span>$<%=items.price%></span></h4>
+                        <p class="vote"><strong>
+                                <%=items.buyer%>
+                            </strong> of buyers enjoyed this product! <strong>( <%=items.votes%> votes)</strong></p>
+                        <form action="/cart/<%=no%>" method="post">
+                            <h5 class="sizes">Quantity:
+
+                                <select class="sizes form-control" name="quantity">
+                                    <option value="1" class="size" data-toggle="tooltip" title="small" selected>1
+                                    </option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+
+                                </select>
+                            </h5>
+                            <h5 class="colors">colors:
+                                <div class="select">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="color" id="inlineRadio1"
+                                            value="green" required>
+                                        <label class="form-check-label" for="inlineRadio1">Green</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="color" id="inlineRadio2"
+                                            value="blue" required>
+                                        <label class="form-check-label" for="inlineRadio2">Blue</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="color" id="inlineRadio3"
+                                            value="red" required>
+                                        <label class="form-check-label" for="inlineRadio3">Red</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="color" id="inlineRadio3"
+                                            value="pink" required>
+                                        <label class="form-check-label" for="inlineRadio4">Pink</label>
+                                    </div>
+                                </div>
+                            </h5>
+                            <div class="action">
+                                <button class="add-to-cart btn btn-default" type="submit" name="cart"
+                                    value="<%=getid%>">add to cart</button>
+                                <button class="add-to-cart btn btn-default" style="margin-left: 10px;"><a
+                                        href="/allProducts/<%=no%>" style="color: white; text-decoration: none;">Buy
+                                        Another
+                                        Item</a></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
